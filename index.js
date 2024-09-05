@@ -11,13 +11,13 @@ const server = new ApolloServer({ resolvers, typeDefs });
 // })
 
 
-server.start().then((res) => {
+server.start().then(res => {
     server.applyMiddleware({ app });
     app.listen({ port: 3000 }, () => {
         console.log('Graphql Server is running port 3000/graphql');
     })
 })
 
-app.listen(3000, () => {
-    console.log('Server is running port 3000...');
-})
+// app.listen(3000, () => {
+//     console.log('Server is running port 3000...');
+// })
