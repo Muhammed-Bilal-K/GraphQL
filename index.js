@@ -6,11 +6,6 @@ const app = express();
 
 const server = new ApolloServer({ resolvers, typeDefs });
 
-// app.get("/",(req,res)=>{
-//     res.send("Welcome Api");
-// })
-
-
 server.start().then(res => {
     server.applyMiddleware({ app });
     app.listen({ port: 3000 }, () => {
