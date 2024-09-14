@@ -6,7 +6,7 @@ const createBooks = async (args, info) => {
       let book = await Book.create(bookInput);
       return book;
     } catch (error) {
-      console.error("Error creating book:", error); // Add this line
+      console.error("Error creating book:", error);
       throw Error(error);
     }
   };
