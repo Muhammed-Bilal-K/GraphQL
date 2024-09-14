@@ -1,7 +1,10 @@
+const { getAuthors } = require("../services/author.services");
+
 const QueryResolver = {
-    Query : {
-        hello : () => "Hello GraphQL Api",
-    },
+  Query: {
+    hello: () => `Hello Graphql API`,
+    getAuthors: () => getAuthors(),
+  },
 };
 
 module.exports = { QueryResolver };
